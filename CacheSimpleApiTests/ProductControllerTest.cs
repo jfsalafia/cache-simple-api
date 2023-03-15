@@ -51,7 +51,7 @@ namespace CacheSimpleApiTests
         public async Task Should_Get_Products_From_External_Source()
         {
             //arrange
-            var token = System.Threading.CancellationToken.None;
+            var token = CancellationToken.None;
 
             //act
             var products = await this.Sut.GetProductsAsync(token);
