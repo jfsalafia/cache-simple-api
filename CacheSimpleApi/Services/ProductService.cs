@@ -17,7 +17,7 @@ namespace CacheSimpleApi.Services
             {
                 // Send a GET request to the API
                 HttpResponseMessage response = await client.GetAsync(ProductApiURL);
-                Console.WriteLine($"{DateTime.Now} - Products Not Found in Cache! Returning data from externa Products API");
+                Console.WriteLine($"{DateTime.Now} - Products Not Found in Cache! Returning data from external Products API");
                 // Check the status code of the response
                 if (response.IsSuccessStatusCode)
                 {
