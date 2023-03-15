@@ -8,7 +8,7 @@ WORKDIR /src
 COPY ["CacheSimpleApi/CacheSimpleApi.csproj", "CacheSimpleApi/"]
 RUN dotnet restore "CacheSimpleApi/CacheSimpleApi.csproj"
 COPY . .
-WORKDIR "/CacheSimpleApi"
+WORKDIR "/src/CacheSimpleApi"
 RUN dotnet build "CacheSimpleApi.csproj" -c Release -o /app/build
 
 FROM build AS publish
