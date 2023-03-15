@@ -2,11 +2,6 @@
 
 namespace CacheSimpleApi.Services
 {
-    public class ProductResponse
-    {
-        public IEnumerable<Product>? Products {get; set;}
-    }
-
     public class ProductService : IProductService
     {
         public string ProductApiURL = "https://dummyjson.com/products";
