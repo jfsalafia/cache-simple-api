@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CacheSimpleApi", "CacheSimpleApi\CacheSimpleApi.csproj", "{422E6898-3748-4973-AA63-71AF13C437D5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CacheSimpleApiTests", "CacheSimpleApiTests\CacheSimpleApiTests.csproj", "{0EC23503-2A22-4C91-B81A-3882043CD02F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{422E6898-3748-4973-AA63-71AF13C437D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{422E6898-3748-4973-AA63-71AF13C437D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{422E6898-3748-4973-AA63-71AF13C437D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EC23503-2A22-4C91-B81A-3882043CD02F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EC23503-2A22-4C91-B81A-3882043CD02F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EC23503-2A22-4C91-B81A-3882043CD02F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EC23503-2A22-4C91-B81A-3882043CD02F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
