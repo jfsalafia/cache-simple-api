@@ -21,22 +21,8 @@ namespace CacheSimpleApi.Controllers
         [HttpGet("cached")]
         public async Task<IEnumerable<Product>> GetProductsAsync(CancellationToken cancellationToken)
         {
-            if(_cache != null)
-            {
-                var cachedResults = _cache.TryGet<IEnumerable<Product>>(ProductCacheKey);
-                if (cachedResults.HasValue)
-                {
-                    Console.WriteLine($"{DateTime.Now} - Products Found in Cache! Returning Cache Data.");
-                    return cachedResults.Value;
-                }
-                else
-                {   
-                    var items = await _cache.GetOrSetAsync(ProductCacheKey, _ => _productService.GetProductsAsync(cancellationToken), TimeSpan.FromMinutes(1), cancellationToken);
-                    return (items ?? Enumerable.Empty<Product>());
-                }                
-            }
-
-            return Enumerable.Empty<Product>();
+            var items = await _cache.GetOrSetAsync(ProductCacheKey, _ => _productService.GetProductsAsync(cancellationToken), TimeSpan.FromMinutes(1), cancellationToken);
+            return (items ?? Enumerable.Empty<Product>());
         }
     }
 }
