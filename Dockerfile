@@ -17,4 +17,5 @@ RUN dotnet publish "CacheSimpleApi.csproj" -c Release -o /app/publish
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-CMD ASPNETCORE_URLS=http://*:$PORT dotnet CacheSimpleApi.dll
+CMD ASPNETCORE_URLS=http://0.0.0.0:5010 dotnet CacheSimpleApi.dll
+EXPOSE 5010
